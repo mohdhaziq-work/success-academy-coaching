@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const fields=[['Student Name',document.getElementById('fullName').value],['Parent Name',document.getElementById('parentName').value],['Phone',document.getElementById('phone').value],['Email',document.getElementById('email').value||'N/A'],['Class',document.getElementById('class').value],['Board',document.getElementById('board').value],['Course',document.getElementById('course').value],['Batch',document.getElementById('batch').value||'Any']];
       sum.innerHTML=fields.map(([l,v])=>`<div class="review-row"><span class="review-label">${l}</span><span class="review-value">${v}</span></div>`).join('')
     }
-    form.addEventListener('submit',e=>{e.preventDefault();if(!document.getElementById('agreeTerms').checked){showToast('Please agree to the terms');return}showToast('🎓 Application submitted! We will contact you soon.');form.reset();showStep(1)})
+    form.addEventListener('submit',e=>{e.preventDefault();if(!document.getElementById('agreeTerms').checked){showToast('Please agree to the terms');return}showToast('Application submitted! We will contact you soon.');form.reset();showStep(1)})
   }
 
   function showToast(msg){const t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}
