@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission — Success Academy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header"><div class="sidebar-logo">SA</div><span>Success Academy</span><button class="sidebar-close" id="sidebarClose">✕</button></div>
+    <nav class="sidebar-nav">
+      <a href="../index.html" class="sidebar-link"><span class="s-num">01</span>Home</a>
+      <a href="courses.html" class="sidebar-link"><span class="s-num">02</span>Courses</a>
+      <a href="results.html" class="sidebar-link"><span class="s-num">03</span>Results</a>
+      <a href="admission.html" class="sidebar-link active"><span class="s-num">04</span>Admission</a>
+    </nav>
+    <div class="sidebar-footer"><div class="sidebar-badge">🎓 3 Free Demo Classes</div><a href="admission.html" class="sidebar-cta">Apply Now</a></div>
+  </aside>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand"><div class="brand-icon">SA</div><span class="brand-text">Success Academy</span></a>
+      <ul class="nav-links" id="navLinks"><li><a href="../index.html" class="nav-link">Home</a></li><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="results.html" class="nav-link">Results</a></li><li><a href="admission.html" class="nav-link nav-cta active">Apply Now</a></li></ul>
+      <button class="hamburger" id="hamburger"><span class="h-bar"></span><span class="h-bar h-mid"></span><span class="h-bar"></span></button>
+    </div>
+  </nav>
+  <section class="page-hero"><div class="container"><span class="section-tag" data-fade>Admission</span><h1 class="page-title" data-fade data-delay="200">Apply for <span class="hl">Admission</span></h1><p class="page-desc" data-fade data-delay="400">Fill the form in 3 simple steps</p></div></section>
+  <section class="admission-section section">
+    <div class="container">
+      <div class="form-wrap" data-fade>
+        <div class="steps">
+          <div class="step active" data-step="1"><span>1</span>Personal</div>
+          <div class="step-line"></div>
+          <div class="step" data-step="2"><span>2</span>Academic</div>
+          <div class="step-line"></div>
+          <div class="step" data-step="3"><span>3</span>Confirm</div>
+        </div>
+        <form id="admissionForm">
+          <div class="form-step active" data-step="1">
+            <h3>Personal Information</h3>
+            <div class="fg-grid"><div class="fg"><label>Full Name *</label><input type="text" id="fullName" required placeholder="Student's name" /></div><div class="fg"><label>Parent Name *</label><input type="text" id="parentName" required placeholder="Father/Mother name" /></div><div class="fg"><label>Phone *</label><input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX" /></div><div class="fg"><label>Email</label><input type="email" id="email" placeholder="student@email.com" /></div></div>
+            <div class="form-nav"><span></span><button type="button" class="btn btn-primary next-step">Next →</button></div>
+          </div>
+          <div class="form-step" data-step="2">
+            <h3>Academic Details</h3>
+            <div class="fg-grid"><div class="fg"><label>Class *</label><select id="class" required><option value="">Select</option><option>9th</option><option>10th</option><option>11th</option><option>12th</option><option>Dropper</option></select></div><div class="fg"><label>Board *</label><select id="board" required><option value="">Select</option><option>UP Board</option><option>CBSE</option></select></div><div class="fg"><label>Course *</label><select id="course" required><option value="">Select</option><option>Board Exam Prep</option><option>NEET Foundation</option><option>JEE Preparation</option><option>Competitive Exams</option></select></div><div class="fg"><label>Batch</label><select id="batch"><option value="">Any</option><option>Morning (7-10 AM)</option><option>Afternoon (2-5 PM)</option><option>Evening (5-8 PM)</option></select></div></div>
+            <div class="form-nav"><button type="button" class="btn btn-outline prev-step">← Back</button><button type="button" class="btn btn-primary next-step">Next →</button></div>
+          </div>
+          <div class="form-step" data-step="3">
+            <h3>Review & Confirm</h3>
+            <div id="reviewSummary" class="review-summary"></div>
+            <label class="check-label"><input type="checkbox" id="agreeTerms" required /><span>I confirm the information is correct.</span></label>
+            <div class="form-nav"><button type="button" class="btn btn-outline prev-step">← Back</button><button type="submit" class="btn btn-primary">Submit 🎓</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"><div class="container footer-bottom"><p>© 2024 Success Academy. All rights reserved.</p><p>Built by <strong>Mohd Haziq</strong></p></div></footer>
+  <div id="toast" class="toast"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
